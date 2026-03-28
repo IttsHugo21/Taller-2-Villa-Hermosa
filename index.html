@@ -240,12 +240,22 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Mock Map Placeholder -->
-                    <div class="mt-8 rounded-2xl overflow-hidden shadow-md h-64 bg-gray-200 flex items-center justify-center">
-                        <div class="text-center p-6">
-                            <i class="fas fa-map-marked-alt text-4xl text-gray-400 mb-2"></i>
-                            <p class="text-gray-500 font-medium">Mapa de ubicación en Zaragoza</p>
-                            <a href="https://www.google.com/maps/dir//Talleres+Villa+Hermosa,+C.+de+la+Duquesa+de+Villahermosa,+115,+Delicias,+50009+Zaragoza/@41.6427306,-0.9252063,17z" target="_blank" class="mt-4 inline-block text-primary font-bold">Cómo llegar en Google Maps →</a>
+                    <!-- Interactive Google Map -->
+                    <div class="mt-8 rounded-2xl overflow-hidden shadow-xl h-[350px] bg-gray-200 relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m11!1m3!1d2981.428574636904!2d-0.9126250239276437!3d41.64645227126786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="grayscale hover:grayscale-0 transition-all duration-500">
+                        </iframe>
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg md:hidden">
+                            <a href="https://www.google.com/maps/dir//Talleres+Villa+Hermosa,+C.+de+la+Duquesa+de+Villahermosa,+115,+Delicias,+50009+Zaragoza" target="_blank" class="flex items-center justify-center gap-2 text-primary font-bold text-sm">
+                                <i class="fas fa-directions"></i> Abrir en Google Maps
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -262,7 +272,7 @@
                             <div class="mt-4 font-bold text-sm">— Reseña 5 estrellas</div>
                         </div>
                         <div class="text-center">
-                            <a href="#" class="text-gray-400 hover:text-primary transition-colors font-semibold">Ver las 66 reseñas en Google Maps</a>
+                            <a href="https://www.google.com/maps/place/Talleres+Villa+Hermosa/@41.6427306,-0.9252063,17z/data=!4m8!3m7!1s0xd5914946327663d:0x3a48e895746973e3!8m2!3d41.6427266!4d-0.9226314!9m1!1b1!16s%2Fg%2F1tf7w4y9" target="_blank" class="text-gray-400 hover:text-primary transition-colors font-semibold">Ver las 66 reseñas en Google Maps</a>
                         </div>
                     </div>
                 </div>
