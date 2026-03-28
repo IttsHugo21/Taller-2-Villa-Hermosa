@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres Villa Hermosa - Tu taller de confianza en Zaragoza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #c2410c; /* Orange-700 */
+            --secondary: #1f2937; /* Gray-800 */
+        }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        .border-primary { border-color: var(--primary); }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <i class="fas fa-car-side text-primary text-3xl"></i>
+                        <span class="text-2xl font-bold tracking-tighter text-gray-900">VILLA HERMOSA</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="font-medium hover:text-primary transition-colors">Inicio</a>
+                    <a href="#servicios" class="font-medium hover:text-primary transition-colors">Servicios</a>
+                    <a href="#nosotros" class="font-medium hover:text-primary transition-colors">Nosotros</a>
+                    <a href="#contacto" class="font-medium hover:text-primary transition-colors">Contacto</a>
+                    <a href="#cita" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-orange-800 transition-all">Pedir Cita</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-2 shadow-xl">
+            <a href="#inicio" class="block py-2 text-lg font-medium">Inicio</a>
+            <a href="#servicios" class="block py-2 text-lg font-medium">Servicios</a>
+            <a href="#nosotros" class="block py-2 text-lg font-medium">Nosotros</a>
+            <a href="#contacto" class="block py-2 text-lg font-medium">Contacto</a>
+            <a href="#cita" class="block py-2 text-primary font-bold">Pedir Cita</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center pt-20 overflow-hidden bg-gray-900">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1486006396193-471a73721340?auto=format&fit=crop&q=80&w=2000" alt="[Taller de mecánica]" class="w-full h-full object-cover">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center bg-primary/20 backdrop-blur-sm border border-primary/30 px-3 py-1 rounded-full mb-6">
+                    <span class="text-primary mr-2"><i class="fas fa-star"></i></span>
+                    <span class="text-sm font-semibold tracking-wide uppercase">4.5/5 en Reseñas Google</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Mecánica de Confianza en <span class="text-primary">Zaragoza</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed">
+                    En Talleres Villa Hermosa cuidamos de tu coche como si fuera nuestro. Más de 66 reseñas avalan nuestra profesionalidad en el barrio de Delicias.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#cita" class="px-8 py-4 bg-primary rounded-xl font-bold text-lg text-center hover:shadow-lg hover:shadow-orange-700/30 transition-all">Reservar ahora</a>
+                    <a href="tel:976350220" class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl font-bold text-lg text-center hover:bg-white/20 transition-all">Llamar: 976 35 02 20</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Rápidos -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Servicios Profesionales</h2>
+                <div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary transition-all group">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-oil-can text-primary text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Mantenimiento</h3>
+                    <p class="text-gray-600">Cambios de aceite, filtros, revisión de niveles y puesta a punto para ITV. Alargamos la vida de tu motor.</p>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary transition-all group">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-microchip text-primary text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Diagnosis</h3>
+                    <p class="text-gray-600">Equipos de diagnosis avanzada para localizar fallos electrónicos y mecánicos de forma precisa y rápida.</p>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary transition-all group">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-tools text-primary text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Reparación General</h3>
+                    <p class="text-gray-600">Frenos, embragues, correas de distribución, amortiguación y todo tipo de mecánica multimarca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="py-24 bg-gray-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&q=80&w=800" alt="[Mecánico trabajando]" class="rounded-3xl shadow-2xl relative z-10">
+                        <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-primary/20 rounded-3xl -z-0"></div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-6">Tu taller en el barrio de Delicias</h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Ubicados en la Calle de la Duquesa de Villahermosa, 115, en Talleres Villa Hermosa llevamos años ofreciendo un servicio cercano y honesto. Somos especialistas en detectar el problema real de tu vehículo y ofrecerte la mejor solución calidad-precio.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>Repuestos de primera calidad certificados</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>Presupuestos cerrados sin sorpresas</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>Atención personalizada por expertos</span>
+                        </li>
+                    </ul>
+                    <div class="bg-gray-800 p-6 rounded-2xl inline-block">
+                        <div class="flex items-center gap-4">
+                            <div class="text-4xl font-bold text-primary">4.5</div>
+                            <div>
+                                <div class="flex text-yellow-500 mb-1">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="text-sm text-gray-400">Puntuación Google (66 reseñas)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Cita -->
+    <section id="cita" class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="bg-primary px-8 py-10 text-white text-center">
+                    <h2 class="text-3xl font-bold mb-2">Solicita Presupuesto o Cita</h2>
+                    <p class="opacity-90">Déjanos tus datos y te contactaremos en menos de 24h</p>
+                </div>
+                <form class="p-8 md:p-12 space-y-6" onsubmit="event.preventDefault(); showSuccessMessage();">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Nombre Completo</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Teléfono de contacto</label>
+                            <input type="tel" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="976 00 00 00">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Matrícula o Modelo del vehículo</label>
+                        <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="Ej: Toyota Auris - 1234 ABC">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">¿Qué necesita el coche?</label>
+                        <textarea rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="Cuéntanos el problema o el servicio que necesitas..."></textarea>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" required id="privacy" class="mt-1 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary">
+                        <label for="privacy" class="text-sm text-gray-500">He leído y acepto la <a href="#" onclick="showLegal('privacidad')" class="text-primary hover:underline">Política de Privacidad</a>.</label>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-orange-800 transition-all shadow-lg">Enviar Solicitud</button>
+                </form>
+            </div>
+            <div id="success-msg" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-xl text-center font-bold">
+                ¡Gracias! Hemos recibido tu solicitud correctamente.
+            </div>
+        </div>
+    </section>
+
+    <!-- Datos de Contacto y Mapa -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 text-gray-900">Dónde estamos</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Dirección</h4>
+                                <p class="text-gray-600">C. de la Duquesa de Villahermosa, 115<br>Delicias, 50009 Zaragoza</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Teléfono</h4>
+                                <p class="text-gray-600">976 35 02 20</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Horario</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 08:00 – 13:30 | 15:30 – 19:30<br>Sábados y Domingos: Cerrado</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mock Map Placeholder -->
+                    <div class="mt-8 rounded-2xl overflow-hidden shadow-md h-64 bg-gray-200 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <i class="fas fa-map-marked-alt text-4xl text-gray-400 mb-2"></i>
+                            <p class="text-gray-500 font-medium">Mapa de ubicación en Zaragoza</p>
+                            <a href="https://www.google.com/maps/dir//Talleres+Villa+Hermosa,+C.+de+la+Duquesa+de+Villahermosa,+115,+Delicias,+50009+Zaragoza/@41.6427306,-0.9252063,17z" target="_blank" class="mt-4 inline-block text-primary font-bold">Cómo llegar en Google Maps →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900 text-center">Reseñas destacadas</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm italic border-l-4 border-primary">
+                            <p class="text-gray-700">"Excelente trato y profesionalidad. Me solucionaron un problema que en otros talleres no daban con él. Totalmente recomendados."</p>
+                            <div class="mt-4 font-bold text-sm">— Cliente de Google</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm italic border-l-4 border-primary">
+                            <p class="text-gray-700">"El taller de confianza de toda la vida. Honestos y rápidos. Siempre llevo mis coches aquí para la revisión."</p>
+                            <div class="mt-4 font-bold text-sm">— Reseña 5 estrellas</div>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors font-semibold">Ver las 66 reseñas en Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 text-white mb-6">
+                        <i class="fas fa-car-side text-primary text-2xl"></i>
+                        <span class="text-2xl font-bold">Talleres Villa Hermosa</span>
+                    </div>
+                    <p class="max-w-md leading-relaxed">
+                        Taller de reparación mecánica multimarca especializado en mantenimiento integral del vehículo en el corazón de Zaragoza. Calidad y servicio cercano desde 1995.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Legal</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" onclick="showLegal('aviso')" class="hover:text-primary transition-colors">Aviso Legal</a></li>
+                        <li><a href="#" onclick="showLegal('privacidad')" class="hover:text-primary transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" onclick="showLegal('cookies')" class="hover:text-primary transition-colors">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Contacto Directo</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center gap-2 text-white font-bold">
+                            <i class="fas fa-phone text-primary"></i>
+                            976 35 02 20
+                        </li>
+                        <li>Delicias, Zaragoza</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-xs">
+                &copy; 2024 Talleres Villa Hermosa. Todos los derechos reservados. Diseñado para el barrio de Delicias.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-6 z-[100] border-t-2 border-primary transform translate-y-full transition-transform duration-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-300">
+                Utilizamos cookies propias y de terceros para mejorar su experiencia y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación.
+            </p>
+            <div class="flex gap-4">
+                <button onclick="acceptCookies()" class="bg-primary hover:bg-orange-800 px-6 py-2 rounded-lg font-bold transition-all">Aceptar</button>
+                <button onclick="acceptCookies()" class="border border-gray-600 px-6 py-2 rounded-lg hover:bg-gray-800 transition-all text-sm">Configurar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Legal -->
+    <div id="legal-modal" class="fixed inset-0 bg-black/80 z-[200] hidden items-center justify-center p-4">
+        <div class="bg-white w-full max-w-4xl h-[80vh] rounded-3xl overflow-hidden flex flex-col">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                <h2 id="legal-title" class="text-2xl font-bold text-gray-900">Documento Legal</h2>
+                <button onclick="closeLegal()" class="text-gray-400 hover:text-red-500 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="legal-content" class="p-8 overflow-y-auto text-gray-600 leading-relaxed space-y-4 prose max-w-none">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Form Submission
+        function showSuccessMessage() {
+            const msg = document.getElementById('success-msg');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 5000);
+        }
+
+        // Cookie Banner Logic
+        window.onload = () => {
+            setTimeout(() => {
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    document.getElementById('cookie-banner').classList.remove('translate-y-full');
+                }
+            }, 1000);
+        };
+
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+        }
+
+        // Legal Content
+        const legalData = {
+            aviso: {
+                title: "Aviso Legal",
+                content: `
+                    <h3>1. Información General</h3>
+                    <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se facilitan los siguientes datos:</p>
+                    <p><strong>Titular:</strong> Talleres Villa Hermosa (CIF/NIF proporcionado bajo petición en local)</p>
+                    <p><strong>Dirección:</strong> C. de la Duquesa de Villahermosa, 115, 50009 Zaragoza</p>
+                    <p><strong>Teléfono:</strong> 976 35 02 20</p>
+                    
+                    <h3>2. Propiedad Intelectual</h3>
+                    <p>Los contenidos de este sitio web, incluyendo textos, imágenes y diseño gráfico, pertenecen a Talleres Villa Hermosa o a terceros que han autorizado su uso. Queda prohibida la reproducción total o parcial sin autorización expresa.</p>
+                    
+                    <h3>3. Responsabilidad</h3>
+                    <p>El taller no se hace responsable de los errores en los contenidos, ni de la falta de disponibilidad del portal o la transmisión de virus, a pesar de haber adoptado todas las medidas tecnológicas para evitarlo.</p>
+                `
+            },
+            privacidad: {
+                title: "Política de Privacidad",
+                content: `
+                    <h3>1. Tratamiento de Datos</h3>
+                    <p>De conformidad con el Reglamento General de Protección de Datos (RGPD), informamos que los datos recogidos a través de los formularios de contacto se tratarán con la exclusiva finalidad de gestionar su solicitud de cita o información.</p>
+                    
+                    <h3>2. Responsable del Fichero</h3>
+                    <p>Sus datos se incorporarán a un fichero responsabilidad de Talleres Villa Hermosa. No se cederán datos a terceros salvo obligación legal.</p>
+                    
+                    <h3>3. Derechos del Usuario</h3>
+                    <p>Usted tiene derecho a acceder, rectificar, limitar el tratamiento o suprimir sus datos personales enviando una solicitud por escrito a la dirección del taller en Calle Duquesa de Villahermosa 115, Zaragoza, aportando fotocopia de su DNI.</p>
+                    
+                    <h3>4. Plazo de Conservación</h3>
+                    <p>Los datos se conservarán mientras se mantenga la relación comercial o durante el tiempo necesario para cumplir con las obligaciones legales.</p>
+                `
+            },
+            cookies: {
+                title: "Política de Cookies",
+                content: `
+                    <h3>¿Qué son las cookies?</h3>
+                    <p>Una cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las cookies permiten a una página web almacenar y recuperar información sobre los hábitos de navegación de un usuario.</p>
+                    
+                    <h3>Tipos de cookies utilizadas</h3>
+                    <ul>
+                        <li><strong>Cookies técnicas:</strong> Necesarias para el funcionamiento de la web.</li>
+                        <li><strong>Cookies de análisis:</strong> Aquellas que nos permiten cuantificar el número de usuarios y realizar la medición y análisis estadístico de la utilización que hacen del servicio ofertado (Google Analytics).</li>
+                    </ul>
+                    
+                    <h3>Cómo desactivar las cookies</h3>
+                    <p>Usted puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador (Chrome, Firefox, Safari, Edge).</p>
+                `
+            }
+        };
+
+        function showLegal(type) {
+            const modal = document.getElementById('legal-modal');
+            const title = document.getElementById('legal-title');
+            const content = document.getElementById('legal-content');
+            
+            title.innerText = legalData[type].title;
+            content.innerHTML = legalData[type].content;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLegal() {
+            const modal = document.getElementById('legal-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on click outside
+        window.onclick = (event) => {
+            const modal = document.getElementById('legal-modal');
+            if (event.target == modal) closeLegal();
+        }
+    </script>
+</body>
+</html>
